@@ -1,0 +1,168 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container {
+    text-align: center;
+    background: linear-gradient(to right, rgb(0, 0, 0), rgb(1, 1, 141));
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    margin-top: 0;
+    display: none;
+}
+
+.tower-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    height: 300px;
+    
+}
+
+.rod {
+    width: 10px;
+    height: 250px;
+    background-color: #ffffff;
+    position: relative;
+    display: flex;
+    justify-content: flex-start; /* Align discs to start at the top of the rod */
+    align-items: center; /* Center discs horizontally */
+    flex-direction: column-reverse; /* Stack discs from bottom to top */
+    z-index:5;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    
+}
+
+
+.disc {
+    width: 100px;
+    height: 20px;
+    background-color: #523500;
+    border-radius: 10px;
+    border: solid 2px black;
+    transition: all 0.5s ease;
+}
+
+#startBtn {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#startBtn:hover {
+    background-color: #0056b3;
+}
+.heading h1{
+   padding-top: 10px;
+    color: wheat;
+    font-size: 3rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+#starttoh,#setdisc{
+    margin: 2px;
+}
+.base{
+    width: 100vw;
+    height: 20vh;
+    border-top: black solid;
+    background-color: rgb(56, 18, 0);
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+.control_toh{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  
+}
+
+.moves_card{
+    position: absolute;
+    width: 500px;
+    height: 100vh;
+    background-color: rgb(0, 0, 0,0.9);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    font-size: 2rem;
+    color: #ffffff;
+    z-index: 10;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    transition: all 0.5s ease-in;
+    left: -5000px;
+    overflow: auto;
+    
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 12px;  /* Width of the vertical scrollbar */
+    height: 12px; /* Height of the horizontal scrollbar */
+}
+
+/* Track (background of the scrollbar) */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;  /* Light gray background for the track */
+    border-radius: 10px;   /* Rounded corners for the track */
+}
+
+/* Handle (the draggable part of the scrollbar) */
+::-webkit-scrollbar-thumb {
+    background-color: #ffffff;  /* Dark gray color for the thumb */
+    border-radius: 10px;     /* Rounded corners for the thumb */
+    border: 3px solid #fffdfd;  /* Border around the thumb */
+}
+
+/* Handle hover (when the user hovers over the scrollbar) */
+::-webkit-scrollbar-thumb:hover {
+    background-color: #44005f;  /* Darker color when hovering */
+}
+
+/* For horizontal scrollbar, if needed */
+::-webkit-scrollbar-horizontal {
+    height: 5px; 
+}
+
+
+
+@media(max-width:600px){
+    .heading h1{
+          color: wheat;
+            font-size: 1.2rem;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        .base{
+            height: 5vh;
+        }
+        #starttoh{
+            margin-bottom: 10px;
+            margin-right: 20px;
+        }
+        .disc{
+            width: 50px;
+        }
+        .control_toh{
+            display: flex;
+    
+            flex-direction: column;
+            justify-content: center;
+        }
+        lable{
+            color: white;
+        }
+        .moves_card{
+            width: 100vw;
+
+        }
+       
+}

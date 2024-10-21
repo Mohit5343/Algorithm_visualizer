@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sorting Visualizer</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="css/sort.css" />
+    <link rel="stylesheet" href="css/toh.css" />
+    <link rel="stylesheet" href="css/path.css" />
+    <link rel="stylesheet" href="css/homepage.css" />
+  </head>
+  <body>
+    <div class="sort_container">
+      <div class="sort_header"><h1>Sorting Visualizer</h1></div>
+      <div class="button_container">
+        <button id="reset_sort">Reset</button>
+        <button id="selection">Selection</button>
+        <button id="bubble">Bubble</button>
+        <button id="linear">Linear</button>
+        <button id="merge">Merge</button>
+        <button id="quick">Quick</button>
+      </div>
+      <div class="controls">
+        <i class="fa fa-home fa-2x" id="home_sort" aria-hidden="true"></i>
+
+        <label for="barsInput">Number of Bars:</label>
+        <input type="range" id="barsInput" min="5" max="300" value="10" />
+        <span id="barsValue">10</span>
+
+        <label for="speedInput">Sorting Speed:</label>
+        <input type="range" id="speedInput" min="1" max="500" value="100" />
+        <span id="speedValue">100</span>
+      </div>
+      <div class="bar_container"></div>
+    </div>
+
+    <!-- **************************************FOR TOH************************************************************ -->
+    <div class="container">
+      <div class="moves_card"></div>
+
+      <div class="heading"><h1>Tower Of Hanoi</h1></div>
+      <div class="tower-container">
+        <div class="rod" id="rod1" data-value="ROD-1"></div>
+        <div class="rod" id="rod2" data-value="ROD-2"></div>
+        <div class="rod" id="rod3" data-value="ROD-3"></div>
+      </div>
+      <div class="base"></div>
+      <div class="buttons_path">
+        <i
+          class="fa fa-home fa-2x fa-toh"
+          id="home_hanoi"
+          aria-hidden="true"
+        ></i>
+
+        <button id="starttoh">Start</button>
+        <button id="resettoh">Reset</button>
+      </div>
+      <div class="control_toh">
+        <div>
+          <label for="tohinput">Discs:</label>
+          <input type="range" id="tohinput" min="3" max="10" value="3" />
+          <span id="tohinputvalue">10</span>
+        </div>
+        <div>
+          <label for="speedtoh">Speed:</label>
+          <input type="range" id="speedtoh" min="1" max="500" value="100" />
+          <span id="speedtohvalue">100</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- **********************FOR path*************************************************************************** -->
+    <div class="pathcontainer">
+      <div class="head">
+        <h1>Path Finding</h1>
+      </div>
+      <div class="button_path">
+        <i class="fa fa-home fa-2x" id="home_path" aria-hidden="true"></i>
+
+        <button id="flood_fill">Flood Fill</button>
+        <button id="dijkastra">Dijkastra's</button>
+        <button id="start_path">Start</button>
+      </div>
+      <label for="path_input" id="path_label">Grid Size</label>
+      <input type="range" id="path_input" min="5" max="20" value="5" />
+      <span id="path_input_value">10</span>
+      <div class="grid_container"></div>
+    </div>
+<!-- homepage -->
+    <div class="homepage">
+      <h1 class="animated-title">Algorithm Visualizer</h1>
+      <div class="cards-container">
+        <div class="card">
+          <h2>Sorting Visualizer</h2>
+          <p>
+            Visualize various sorting algorithms in action. See how different
+            algorithms sort an array and compare their efficiency.
+          </p>
+          <div class="video-container">
+            <video autoplay loop muted playsinline>
+              <source src="media/sort_video.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+
+          <button id="explore1">Explore</button>
+        </div>
+        <div class="card">
+          <h2>Path Find Algorithm</h2>
+          <p>
+            Explore pathfinding algorithms like Dijkstra's to find the shortest
+            path in a grid. Visualize the algorithm in action and understand how
+            it works.
+          </p>
+          <div class="video-container">
+            <video autoplay loop muted playsinline>
+              <source src="media/path.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <button id="explore2">Explore</button>
+         
+        </div>
+        <div class="card">
+          <h2>Tower of Hanoi</h2>
+          <p>
+            Tower of Hanoi animation.This interactive simulation not only
+            demonstrates the puzzle's complexity but also provides an
+            educational insight into problem-solving and recursion.
+          </p>
+          <div class="video-container">
+            <video autoplay loop muted playsinline>
+              <source src="media/toh.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <button id="explore3">Explore</button>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-content">
+          <h2 id="developer">Developer</h2>
+          <h2>Mohit Kumar</h2>
+
+          <p>
+            <span>
+              <i class="fa fa-envelope fa-2x icons " id="insta" aria-hidden="true"></i>
+            </span>
+            <a href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCHrjmsrRXCCQQqZdzrJxQCJqPlmkKRbfqxsmjBVgMRSKSHnPDDXvJKwKSfQnBhCWthHnPXB"
+              >mohitkumar639649@gmail.com</a
+            >
+          </p>
+          <p> <span>
+            <i class="fa fa-phone fa-2x icons " id="insta" aria-hidden="true"></i>
+          </span> <a href="">+91-6396491537</a></p>
+          <p>
+            <span>
+              <i class="fa fa-github fa-2x icons " id="insta" aria-hidden="true"></i>
+            </span>
+            <a href="https://github.com/Mohit5343" target="_blank"
+              >GitHub</a
+            >
+          </p>
+          <p>
+            <span>
+              <i class="fa fa-instagram fa-2x icons " id="insta" aria-hidden="true"></i>
+            </span>
+            <a href="https://www.instagram.com/mohit639649/profilecard/?igsh=NGNrNjhrenU3aDFj" target="_blank"
+              >Instagram</a
+            >
+          </p>
+          <p>
+            <span>
+              <i class="fa fa-linkedin fa-2x icons " id="insta" aria-hidden="true"></i>
+            </span>
+            <a href="https://www.linkedin.com/in/mohit-kumar-73a508214?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"
+              >Linkedin</a
+            >
+          </p>
+          <p>@Copyright Algorithm_visualizer_mohitkumar</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/sort.js"></script>
+    <script src="js/toh.js"></script>
+    <script src="js/path.js"></script>
+    <script src="js/homepage.js"></script>
+  </body>
+</html>
